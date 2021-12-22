@@ -1,0 +1,18 @@
+Add Cisco IOU/IOL To Eve-ng
+
+1. Upload the downloaded image to the EVE using for example FileZilla or WinSCP to:  /opt/unetlab/addons/iol/bin/.
+2. Fix permissions
+/opt/unetlab/wrappers/unl_wrapper -a fixpermissions
+3. Create iourc license
+4. Store license
+cat /opt/unetlab/addons/iol/bin/iourc
+[license]
+unl01 = 0123456789abcdef;
+5. Test IOU/IOL images
+cd /opt/unetlab/addons/iol/bin
+touch NETMAP
+LD_LIBRARY_PATH=/opt/unetlab/addons/iol/lib /opt/unetlab/addons/iol/bin/<iosname.bin> 1
+
+*important
+need to issue fix permission evetyime a new IOU/IOL image is added
+/opt/unetlab/wrappers/unl_wrapper -a fixpermissions

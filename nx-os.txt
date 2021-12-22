@@ -1,0 +1,5 @@
+[skip]
+to Abort Power On Auto Provisioning on the boot process
+then 
+admin
+*press enter - there is no password
